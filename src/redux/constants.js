@@ -1,0 +1,13 @@
+export const AUDIO_SPEED_LIST = [
+  0.5, 0.75, 1.0, 1.5, 2.0
+]
+
+export const AUDIO_PLAY_STATUS = {
+  PLAYING: 'PLAYING',
+  PAUSED: 'PAUSED',
+  STOPPED: 'STOPPED'
+}
+
+export const ONE_THOUSAND_MILLISECONDS = 1000
+
+export const TEN_THOUSAND_MILLISECONDS = 10000

@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .calculationCard {
+    margin: 20px;
+
+    .title {
+      font-size: xx-large;
+      font-weight: 600;
+    }
+  }
+}
