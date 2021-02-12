@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button, Icon } from 'semantic-ui-react'
 
 import './Calculation.scss'
 
@@ -13,6 +14,10 @@ const Calculation = () => {
         <div className='title'>Aug 12, 2022</div>
         <div>RUNWAY</div>
       </div>
+      <Button positive size="big">
+        Calculate
+        <Icon name="refresh" size="small"></Icon>
+      </Button>
     </div>
   )
 }
