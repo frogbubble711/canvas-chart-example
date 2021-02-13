@@ -15,8 +15,8 @@ const Calculation = () => {
         <div>RUNWAY</div>
       </div>
       <Button positive size="big">
-        Calculate
-        <Icon name="refresh" size="small"></Icon>
+        Recalculate
+        <Icon name="refresh" size="small" className="iconPadding"></Icon>
       </Button>
     </div>
   )

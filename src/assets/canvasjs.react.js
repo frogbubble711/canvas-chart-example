@@ -22,6 +22,17 @@ class CanvasJSChart extends React.Component {
   componentDidMount() {
     //Create Chart and Render
     this.chart = new CanvasJS.Chart(this.chartContainerId, this.options)
+    // var point = this.datasets[0].points[this.options.lineAtIndex]
+    // var scale = this.scale
+    // this.chart.ctx.beginPath()
+    // this.chart.ctx.moveTo(point.x, scale.startPoint + 24)
+    // this.chart.ctx.strokeStyle = '#ff0000'
+    // this.chart.ctx.lineTo(point.x, scale.endPoint)
+    // this.chart.ctx.stroke()
+
+    // // write TODAY
+    // this.chart.ctx.textAlign = 'center'
+    // this.chart.ctx.fillText("TODAY", point.x, scale.startPoint + 12)
     this.chart.render()
 
     if (this.props.onRef) this.props.onRef(this.chart)
@@ -40,9 +51,14 @@ class CanvasJSChart extends React.Component {
     this.chart.destroy()
     if (this.props.onRef) this.props.onRef(undefined)
   }
+  handleMouseDown = (event) => {
+    if (event.type === "mousedown") {
+      this.chart.isMouseDown = true
+    }
+  }
   render() {
     //return React.createElement('div', { id: this.chartContainerId, style: this.containerProps })
-    return <div id={this.chartContainerId} style={this.containerProps} />
+    return <div id={this.chartContainerId} style={this.containerProps} onMouseDown={this.handleMouseDown} />
   }
 }
 
